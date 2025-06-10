@@ -1,0 +1,159 @@
+:root {
+  --primary: #4f46e5;        /* Indigo */
+  --primary-dark: #4338ca;
+  --secondary: #22c55e;      /* Green */
+  --gray-light: #f3f4f6;
+  --gray-dark: #1f2937;
+  --text-muted: #6b7280;
+  --white: #ffffff;
+}
+
+/* Full page layout */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4f46e5, #9333ea);
+  padding: 20px;
+}
+
+/* Center box */
+.login-box {
+  background: var(--white);
+  padding: 40px 30px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Header styles */
+.login-box h2 {
+  margin-bottom: 24px;
+  font-size: 2em;
+  color: var(--gray-dark);
+}
+
+/* Input fields */
+.login-box input {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 1em;
+  transition: 0.3s;
+}
+
+.login-box input:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+
+/* Buttons */
+.login-box button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 12px;
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: 10px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login-box button:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Toggle Buttons */
+.login-box .toggle-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.login-box .toggle-buttons button {
+  flex: 1;
+  margin: 0 5px;
+  background-color: #e5e7eb;
+  color: #1f2937;
+  border-radius: 8px;
+}
+
+.login-box .toggle-buttons button.active {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+/* Forgot Password link */
+.login-box p {
+  margin-top: 10px;
+  color: var(--primary);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.login-box p:hover {
+  text-decoration: underline;
+}
+
+/* OTP & Reset Password Section */
+.otp-section {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.otp-section h3 {
+  margin-bottom: 20px;
+  color: var(--gray-dark);
+}
+
+.otp-section input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1.5px solid #e5e7eb;
+}
+
+.otp-section button {
+  background-color: var(--secondary);
+  margin-top: 10px;
+}
+
+.otp-section button:hover {
+  background-color: #15803d;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-box {
+    padding: 30px 20px;
+  }
+
+  .login-box h2 {
+    font-size: 1.5em;
+  }
+}

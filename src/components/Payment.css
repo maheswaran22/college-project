@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.payment-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+  padding: 20px;
+}
+
+.payment-card {
+  background: #ffffff;
+  padding: 36px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.payment-card h2 {
+  color: #1e1e1e;
+  font-size: 1.9em;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.payment-input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 18px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fafafa;
+  font-size: 15px;
+  transition: border-color 0.2s ease;
+}
+
+.payment-input:focus {
+  outline: none;
+  border-color: #6b73ff;
+  background: #fff;
+}
+
+.payment-button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(118, 75, 162, 0.25);
+}
+
+.payment-button:hover {
+  background: linear-gradient(90deg, #5a67d8, #6b46c1);
+  transform: translateY(-2px);
+}
+
+.payment-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 480px) {
+  .payment-card {
+    padding: 28px 18px;
+  }
+
+  .payment-card h2 {
+    font-size: 1.6em;
+  }
+
+  .payment-input,
+  .payment-button {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
